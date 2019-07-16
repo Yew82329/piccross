@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Scrolling Nav - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+
+    <style>
+        table,
+        tr,
+        td {
+            border-style: dashed;
+            border-width: 2px;
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+        }
+
+
+        .squt {
+            background-color: cadetblue;
+        }
+
+        .squf {
+
+            background-color: lightgray;
+        }
+
+    </style>
+
+    <style>
+        .squt-1 {
+            background-color: black;
+        }
+
+        .squt-2 {
+            background-color: red;
+        }
+
+        .squF {
+            background-color: silver;
+        }
+
+    </style>
+
+
+
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Nonograms</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#services">Video</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Game</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class=" text-white" style="background-color: #fb9661">
+        <div class="container text-center">
+            <h1 style="font-size: 5rem">數織</h1>
+            <p class="lead" style="font-size: 4rem">Nonograms</p>
+
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>About this game</h2>
+                    <p class="lead">Nonograms ，又名 Picross、Griddles、Illust Logic 等等，日本則是お絵かきロジック、ピクロス (繪畫邏輯)，至今還未有正式或廣泛流傳的中文名稱，已知的中文名有：數織、數牆、填方塊、邏輯拼圖等。<br>
+
+                        是一種由日本人西尾徹也於1987年發明的邏輯遊戲，以猜謎的方式繪畫點陣圖，藉由兩排數字來將版圖中的顏色定位出來，一般玩法是黑與白兩種來構圖，近年來也有多色的玩法。<br>
+                        就此來看，它和踩地雷十分相似。但跟踩地雷不同的是，即使填錯了格子，也不會即時出局。
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Video</h2>
+                    <p class="lead">What is a nonogram?</p>
+                    <div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/AA8KVoCse3U?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Stage</h2>
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="tdHint" colspan="2" rowspan="2"></td>
+
+                                <td class="td001" id="A1">0</td>
+                                <td class="td001" id="B1">0</td>
+                                <td class="td001" id="C1">0</td>
+                                <td class="td001" id="D1">1</td>
+                                <td class="td001" id="E1">0</td>
+                            </tr>
+                            <tr>
+
+                                <td class="td001" id="A2">1</td>
+                                <td class="td001" id="B2">4</td>
+                                <td class="td001" id="C2">3</td>
+                                <td class="td001" id="D2">1</td>
+                                <td class="td001" id="E2">1</td>
+                            </tr>
+
+                            <tr>
+                                <td class="td001" id="F1">2</td>
+                                <td class="td001" id="F2">1</td>
+
+                                <td class="td001" id="a"></td>
+                                <td class="td001" id="b"></td>
+                                <td class="td001" id="c"></td>
+                                <td class="td001" id="d"></td>
+                                <td class="td001" id="e"></td>
+                            </tr>
+                            <tr>
+                                <td class="td001" id="G1">1</td>
+                                <td class="td001" id="G2">1</td>
+
+                                <td class="td001" id="f"></td>
+                                <td class="td001" id="g"></td>
+                                <td class="td001" id="h"></td>
+                                <td class="td001" id="i"></td>
+                                <td class="td001" id="j"></td>
+                            </tr>
+                            <tr>
+                                <td class="td001" id="H1">0</td>
+                                <td class="td001" id="H2">2</td>
+
+                                <td class="td001" id="k"></td>
+                                <td class="td001" id="l"></td>
+                                <td class="td001" id="m"></td>
+                                <td class="td001" id="n"></td>
+                                <td class="td001" id="o"></td>
+                            </tr>
+                            <tr>
+                                <td class="td001" id="I1">0</td>
+                                <td class="td001" id="I2">3</td>
+
+                                <td class="td001" id="p"></td>
+                                <td class="td001" id="q"></td>
+                                <td class="td001" id="r"></td>
+                                <td class="td001" id="s"></td>
+                                <td class="td001" id="t"></td>
+                            </tr>
+                            <tr>
+                                <td class="td001" id="J1">0</td>
+                                <td class="td001" id="J2">1</td>
+
+                                <td class="td001" id="u"></td>
+                                <td class="td001" id="v"></td>
+                                <td class="td001" id="w"></td>
+                                <td class="td001" id="x"></td>
+                                <td class="td001" id="y"></td>
+                            </tr>
+
+                        </table>
+
+
+                    </div>
+                    <br>
+                    <button id="btnReset1">reset</button>
+                    <p class="lead">normal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--stage02-->
+    <section id="stage02" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Stage02</h2>
+
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="td002" colspan="2" rowspan="2"></td>
+                                <td class="td002" id="A1">0</td>
+                                <td class="td002" id="B1">4</td>
+                                <td class="td002" id="C1">6</td>
+                                <td class="td002" id="D1">2/3</td>
+                                <td class="td002" id="E1">2/2</td>
+                                <td class="td002" id="F1">3/2</td>
+                                <td class="td002" id="G1">6/1</td>
+                                <td class="td002" id="H1">6</td>
+                                <td class="td002" id="I1">6</td>
+                                <td class="td002" id="J1">4</td>
+                                <td class="td002" id="K1">0</td>
+
+                            </tr>
+
+                            <tr>
+                                <td class="td002" id="A2">3</td>
+                                <td class="td002" id="B2">2</td>
+                                <td class="td002" id="C2">1</td>
+                                <td class="td002" id="D2">1</td>
+                                <td class="td002" id="E2">1</td>
+                                <td class="td002" id="F2">1/1</td>
+                                <td class="td002" id="G2">1</td>
+                                <td class="td002" id="H2">1</td>
+                                <td class="td002" id="I2">1</td>
+                                <td class="td002" id="J2">2</td>
+                                <td class="td002" id="K2">3</td>
+
+                            </tr>
+                            <tr>
+                                <td class="td002" id="L1">0</td>
+                                <td class="td002" id="L2">3</td>
+                                <td class="td002" id="a1"></td>
+                                <td class="td002" id="a2"></td>
+                                <td class="td002" id="a3"></td>
+                                <td class="td002" id="a4"></td>
+                                <td class="td002" id="a5"></td>
+                                <td class="td002" id="a6"></td>
+                                <td class="td002" id="a7"></td>
+                                <td class="td002" id="a8"></td>
+                                <td class="td002" id="a9"></td>
+                                <td class="td002" id="a10"></td>
+                                <td class="td002" id="a11"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="td002" id="M1">0</td>
+                                <td class="td002" id="M2">7</td>
+                                <td class="td002" id="b1"></td>
+                                <td class="td002" id="b2"></td>
+                                <td class="td002" id="b3"></td>
+                                <td class="td002" id="b4"></td>
+                                <td class="td002" id="b5"></td>
+                                <td class="td002" id="b6"></td>
+                                <td class="td002" id="b7"></td>
+                                <td class="td002" id="b8"></td>
+                                <td class="td002" id="b9"></td>
+                                <td class="td002" id="b10"></td>
+                                <td class="td002" id="b11"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="td002" id="N1">3</td>
+                                <td class="td002" id="N2">5</td>
+                                <td class="td002" id="c1"></td>
+                                <td class="td002" id="c2"></td>
+                                <td class="td002" id="c3"></td>
+                                <td class="td002" id="c4"></td>
+                                <td class="td002" id="c5"></td>
+                                <td class="td002" id="c6"></td>
+                                <td class="td002" id="c7"></td>
+                                <td class="td002" id="c8"></td>
+                                <td class="td002" id="c9"></td>
+                                <td class="td002" id="c10"></td>
+                                <td class="td002" id="c11"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="td002" id="O1">2</td>
+                                <td class="td002" id="O2">4</td>
+                                <td class="td002" id="d1"></td>
+                                <td class="td002" id="d2"></td>
+                                <td class="td002" id="d3"></td>
+                                <td class="td002" id="d4"></td>
+                                <td class="td002" id="d5"></td>
+                                <td class="td002" id="d6"></td>
+                                <td class="td002" id="d7"></td>
+                                <td class="td002" id="d8"></td>
+                                <td class="td002" id="d9"></td>
+                                <td class="td002" id="d10"></td>
+                                <td class="td002" id="d11"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="td002" id="P1">4</td>
+                                <td class="td002" id="P2">6</td>
+                                <td class="td002" id="e1"></td>
+                                <td class="td002" id="e2"></td>
+                                <td class="td002" id="e3"></td>
+                                <td class="td002" id="e4"></td>
+                                <td class="td002" id="e5"></td>
+                                <td class="td002" id="e6"></td>
+                                <td class="td002" id="e7"></td>
+                                <td class="td002" id="e8"></td>
+                                <td class="td002" id="e9"></td>
+                                <td class="td002" id="e10"></td>
+                                <td class="td002" id="e11"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="td002" id="Q1">0</td>
+                                <td class="td002" id="Q2">11</td>
+                                <td class="td002" id="f1"></td>
+                                <td class="td002" id="f2"></td>
+                                <td class="td002" id="f3"></td>
+                                <td class="td002" id="f4"></td>
+                                <td class="td002" id="f5"></td>
+                                <td class="td002" id="f6"></td>
+                                <td class="td002" id="f7"></td>
+                                <td class="td002" id="f8"></td>
+                                <td class="td002" id="f9"></td>
+                                <td class="td002" id="f10"></td>
+                                <td class="td002" id="f11"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="td002" id="R1">1/3</td>
+                                <td class="td002" id="R2">2/1</td>
+                                <td class="td002" id="g1"></td>
+                                <td class="td002" id="g2"></td>
+                                <td class="td002" id="g3"></td>
+                                <td class="td002" id="g4"></td>
+                                <td class="td002" id="g5"></td>
+                                <td class="td002" id="g6"></td>
+                                <td class="td002" id="g7"></td>
+                                <td class="td002" id="g8"></td>
+                                <td class="td002" id="g9"></td>
+                                <td class="td002" id="g10"></td>
+                                <td class="td002" id="g11"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="td002" id="S1">1/2</td>
+                                <td class="td002" id="S2">1</td>
+                                <td class="td002" id="h1"></td>
+                                <td class="td002" id="h2"></td>
+                                <td class="td002" id="h3"></td>
+                                <td class="td002" id="h4"></td>
+                                <td class="td002" id="h5"></td>
+                                <td class="td002" id="h6"></td>
+                                <td class="td002" id="h7"></td>
+                                <td class="td002" id="h8"></td>
+                                <td class="td002" id="h9"></td>
+                                <td class="td002" id="h10"></td>
+                                <td class="td002" id="h11"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="td002" id="T1">1</td>
+                                <td class="td002" id="T2">1</td>
+                                <td class="td002" id="i1"></td>
+                                <td class="td002" id="i2"></td>
+                                <td class="td002" id="i3"></td>
+                                <td class="td002" id="i4"></td>
+                                <td class="td002" id="i5"></td>
+                                <td class="td002" id="i6"></td>
+                                <td class="td002" id="i7"></td>
+                                <td class="td002" id="i8"></td>
+                                <td class="td002" id="i9"></td>
+                                <td class="td002" id="i10"></td>
+                                <td class="td002" id="i11"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="td002" id="U1">2</td>
+                                <td class="td002" id="U2">2</td>
+                                <td class="td002" id="j1"></td>
+                                <td class="td002" id="j2"></td>
+                                <td class="td002" id="j3"></td>
+                                <td class="td002" id="j4"></td>
+                                <td class="td002" id="j5"></td>
+                                <td class="td002" id="j6"></td>
+                                <td class="td002" id="j7"></td>
+                                <td class="td002" id="j8"></td>
+                                <td class="td002" id="j9"></td>
+                                <td class="td002" id="j10"></td>
+                                <td class="td002" id="j11"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="td002" id="V1">0</td>
+                                <td class="td002" id="V2">3</td>
+                                <td class="td002" id="k1"></td>
+                                <td class="td002" id="k2"></td>
+                                <td class="td002" id="k3"></td>
+                                <td class="td002" id="k4"></td>
+                                <td class="td002" id="k5"></td>
+                                <td class="td002" id="k6"></td>
+                                <td class="td002" id="k7"></td>
+                                <td class="td002" id="k8"></td>
+                                <td class="td002" id="k9"></td>
+                                <td class="td002" id="k10"></td>
+                                <td class="td002" id="k11"></td>
+
+                            </tr>
+
+
+
+                        </table>
+                    </div>
+                    <br>
+                    <!--                    <button id="reset02">reset</button><br>-->
+                    <p class="lead">big</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+
+    <script>
+        var tbArray1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y'];
+
+        var ansArray1 = [1, 1, 0, 0, 1,
+            0, 1, 0, 1, 0,
+            0, 1, 1, 0, 0,
+            0, 1, 1, 1, 0,
+            0, 0, 1, 0, 0,
+        ];
+
+        // 幫每一個 td 都掛 click事件
+        $("td").each(function(index) {
+
+
+            //設var=>tbId 找出所對應之陣列tbArray1的 index
+            var tbId = $(this).attr("id");
+            //設 var=>num 對應 ansArray1 中的index 判定 T(1) or F(0)   
+            var num = tbArray1.indexOf(tbId);
+            //設var=>tf 確認判斷結果
+            var tf = ansArray1[num];
+
+
+            $(this).click(function() {
+                // 判斷點選的位置 跟 ansArray 是否相同
+                console.log($(this).attr("id"));
+                console.log("index of tbArray1==>" + tbArray1.indexOf(tbId));
+                console.log("1,0判定==>" + ansArray1[num]);
+                //以 var=>tf判定運行的fun為T or F
+                switch (tf) {
+                    case 1:
+                        tr();
+                        break;
+                    case 0:
+                        fau();
+                        break;
+                }
+
+                function tr() {
+                    //加入底色
+                    $("#" + tbId).addClass("squt");
+                    //修改 ansArray 陣列上的數值以利判斷
+                    ansArray1[num] = 0;
+                    console.log(ansArray1.toString());
+                    //透過indexof 找不到值時回傳"-1"的特性決定遊戲是否結束
+                    var win = ansArray1.indexOf(1);
+                    console.log(win)
+                    if (win === -1) {
+                        alert("win");
+                    };
+                }
+
+                function fau() {
+                    console.log("fault");
+                    //塗灰 
+                    $("#" + tbId).addClass("squf");
+
+                }
+            });
+
+        });
+
+        $("#btnReset1").click(function() {
+            $(".td001").removeClass("squt");
+            $(".td001").removeClass("squf");
+            ansArray = [1, 1, 0, 0, 1,
+                0, 1, 0, 1, 0,
+                0, 1, 1, 0, 0,
+                0, 1, 1, 1, 0,
+                0, 0, 1, 0, 0,
+            ];
+        });
+
+    </script>
+
+
+    <script>
+        var tbArray2 =
+
+            ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11',
+                'b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'b7', 'b8', 'b9', 'b10', 'b11',
+                'c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7', 'c8', 'c9', 'c10', 'c11',
+                'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8', 'd9', 'd10', 'd11',
+                'e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'e7', 'e8', 'e9', 'e10', 'e11',
+                'f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11',
+                'g1', 'g2', 'g3', 'g4', 'g5', 'g6', 'g7', 'g8', 'g9', 'g10', 'g11',
+                'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'h8', 'h9', 'h10', 'h11',
+                'i1', 'i2', 'i3', 'i4', 'i5', 'i6', 'i7', 'i8', 'i9', 'i10', 'i11',
+                'j1', 'j2', 'j3', 'j4', 'j5', 'j6', 'j7', 'j8', 'j9', 'j10', 'j11',
+                'k1', 'k2', 'k3', 'k4', 'k5', 'k6', 'k7', 'k8', 'k9', 'k10', 'k11'
+
+            ];
+
+        var ansArray2 = [
+            0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
+            0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0,
+            0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0,
+            0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0,
+            1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+            1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1,
+            0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0,
+            0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+            0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0,
+            0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0
+        ];
+
+
+        var colArray = [
+            0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
+            0, 0, 1, 1, 2, 2, 2, 1, 1, 0, 0,
+            0, 1, 2, 2, 0, 2, 2, 2, 2, 1, 0,
+            0, 1, 2, 0, 0, 0, 2, 2, 2, 1, 0,
+            1, 2, 2, 2, 0, 2, 2, 2, 2, 2, 1,
+            1, 1, 2, 2, 2, 1, 1, 2, 2, 1, 1,
+            1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1,
+            0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0,
+            0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+            0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0,
+            0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0
+        ];
+
+
+
+        $("td").each(function(index) {
+            //            console.log(index);
+            // 幫每一個 td 都掛 click事件
+
+            //設var=>TbId 找出所對應之陣列tbArray的 index
+            var TbId = $(this).attr("id");
+            //設 var=>Num 對應 ansArray 中的index 判定 T(1) or F(0)   
+            var Num = tbArray2.indexOf(TbId);
+            //設var=>tf 確認判斷結果
+            var Tf = ansArray2[Num];
+
+            var col = colArray[Num]
+
+            $(this).click(function() {
+                // 判斷點選的位置 跟 ansArray 是否相同
+                console.log($(this).attr("id"));
+                console.log("index of tbArray==>" + tbArray2.indexOf(TbId));
+                console.log("1,0判定==>" + ansArray2[Num]);
+                //以 var=>tf判定運行的fun為T or F
+                switch (Tf) {
+                    case 1:
+                        console.log("check");
+                        Tr();
+                        break;
+                    case 0:
+                        console.log("check2");
+                        Fau();
+                        break;
+                }
+
+                function Tr() {
+
+                    console.log(col);
+                    switch (col) {
+
+                        case 1:
+                            console.log("check3");
+                            $("#" + TbId).addClass("squt-1");
+                            break;
+                        case 2:
+                            console.log("check4");
+                            $("#" + TbId).addClass("squt-2");
+                            break;
+                        case 0:
+                            console.log("check5");
+
+                            break;
+                    };
+
+
+                    //修改 ansArray 陣列上的數值以利判斷
+                    ansArray2[Num] = 0;
+                    console.log(ansArray2.toString());
+                    //透過indexof 找不到值時回傳"-1"的特性決定遊戲是否結束
+                    var win = ansArray2.indexOf(1);
+                    console.log(win)
+                    if (win === -1) {
+                        alert("win");
+                    };
+                }
+
+                function Fau() {
+                    console.log("fault");
+                    //塗灰 
+                    $("#" + TbId).addClass("squF");
+                };
+
+            });
+
+            //            $("reset02").click(function() {
+            //                $(".td002").removeClass(".squt-1");
+            //                $(".td002").removeClass(".squt-2");
+            //                $(".td002").removeClass(".squF");
+            //                ansArray2 = [
+            //                    0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
+            //                    0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0,
+            //                    0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0,
+            //                    0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0,
+            //                    1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
+            //                    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+            //                    1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1,
+            //                    0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0,
+            //                    0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+            //                    0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0,
+            //                    0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0
+            //                ]
+            //
+            //
+            //
+            //            });
+
+        });
+
+    </script>
+</body>
+
+</html>
